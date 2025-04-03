@@ -20,3 +20,5 @@ flutter:
   assets:
     - lib/assets/tree.png
     - lib/assets/palm.png
+    - lib/assets/flower.png
+    - lib/assets/coconut.png
