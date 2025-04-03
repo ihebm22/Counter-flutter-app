@@ -117,6 +117,7 @@ String tree= "tree.png";
             ],
           ),
           SizedBox(height: 50),
+          
           Padding(
             padding: const EdgeInsets.only(top: 30, bottom: 50),
             child: Center(
@@ -128,6 +129,16 @@ String tree= "tree.png";
                   color: Color.fromARGB(255, 42, 217, 112),
                 ),
               ),
+            ),
+          ),
+          Container(
+            height: counter <=100 ? (50.0 + (counter * 3)).clamp(370, 600) : 370,
+            padding: EdgeInsets.only(bottom: 20),
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(
+              'lib/assets/$tree',
+              height: 50.0 + (counter * 3),
+              fit: BoxFit.contain,
             ),
           ),
           Row(
@@ -173,28 +184,8 @@ String tree= "tree.png";
               ),
             ],
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 25),
-              child: Text(
-                'Your tree:',
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black87,
-                    fontSize: 22),
-              ),
-            ),
-          ),
-          Container(
-            height: (50.0 + (counter * 3)).clamp(200, 600),
-            padding: EdgeInsets.only(bottom: 20),
-            alignment: Alignment.bottomCenter,
-            child: Image.asset(
-              'lib/assets/$tree',
-              height: 50.0 + (counter * 3),
-              fit: BoxFit.contain,
-            ),
-          ),
+          
+          
         ],
       ),
     );
