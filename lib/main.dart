@@ -60,6 +60,12 @@ class _MainScreenState extends State<MainScreen> {
       }
     });
   }
+  void assignColor(bool a){
+    if (a) {
+       Color.fromARGB(255, 166, 238, 166);
+    }
+    
+  }
 
   void decreaseCounter() {
     setState(() {
@@ -184,7 +190,7 @@ class _MainScreenState extends State<MainScreen> {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 100, right: 28),
+                  padding: const EdgeInsets.only(left: 70, right: 28),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: const CircleBorder(),
@@ -230,6 +236,7 @@ class _MainScreenState extends State<MainScreen> {
                       borderRadius: BorderRadius.circular(40),
                     ),
                     child: ElevatedButton(
+                      //onHover: assignColor,
                       onPressed: () {
                         setState(() {
                           counter = 0;
